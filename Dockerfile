@@ -8,6 +8,10 @@ RUN rm -f /etc/apt/sources.list.d/*.list
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND=noninteractive
 ENV SHELL=/bin/bash
+ENV RUNPOD_SLS_CORE=true \
+    RUNPOD_SLS_LOG_LEVEL=TRACE \
+    RUNPOD_LOG_LEVEL=TRACE \
+    RUNPOD_SLS_CORE_BATCH_JOBS_ENABLED=false
 
 # Set working directory
 WORKDIR /
